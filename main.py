@@ -8,7 +8,6 @@ import sobre as sb
 import values_to_grafico as vtg
 import gerarRelatorio as gr
 
-path_default = os.getcwd() + "\\"
 icone = "img/icone.png"
 fundo = "img/fundo.png"
 logos = "img/logos.png"
@@ -50,10 +49,6 @@ class MainWindow(QtWidgets.QMainWindow, mw.Ui_mainWindow):
         self.atalhoSobre = QShortcut(QKeySequence("Ctrl+Q"), self)
         self.atalhoSobre.activated.connect(self.showSobre)
         self.actionSobre.triggered.connect(self.showSobre)
-
-    #        pixmap = QPixmap(logo)
-    #        pixmap = pixmap.scaled(self.lb_image.width(),self.lb_image.height())
-    #        self.lb_image.setPixmap(pixmap)
 
     def showSobre(self):
         global tela
@@ -200,6 +195,8 @@ class MainWindow(QtWidgets.QMainWindow, mw.Ui_mainWindow):
         sys.exit()
 
     def Relatorio(self):
+        w = QWidget()
+        w.setWindowIcon(QtGui.QIcon(QtGui.QPixmap(icone)))
         try:
             if self.periodoOk():
                 self.fazerCalculos()
@@ -218,13 +215,11 @@ class MainWindow(QtWidgets.QMainWindow, mw.Ui_mainWindow):
                     combined_list,
                 )
                 vtg.aux = 1
+                QMessageBox.information(w, "Aviso", "Relatório gerado com sucesso!")
         except Exception as error:
             print(error)
-            w = QWidget()
-            w.setWindowIcon(QtGui.QIcon(QtGui.QPixmap(icone)))
             QMessageBox.information(w, "Atenção", "Selecione um arquivo primeiro!")
 
-    ##falta terminar essa funçao com temperatura
     def Grafico(self):
         w = QWidget()
         w.setWindowIcon(QtGui.QIcon(QtGui.QPixmap(icone)))
