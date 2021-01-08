@@ -1,3 +1,5 @@
-pyinstaller -w -F --noconsole -i "C:\Users\leona\OneDrive\UFU\IC\interface\imagens\icone.ico" --distpath="." -p "C:\Users\leona\Anaconda3\Lib\site-packages\PyQt5" main.py
+pyinstaller -w -F --noconsole -i "C:\Users\leona\OneDrive\UFU\IC\interface\img\icone.ico" --distpath="." -p "C:\Users\leona\Anaconda3\Lib\site-packages\PyQt5" main.py
 
 pyuic5.exe -x main_window.ui -o main_window.py
+
+pip freeze > support/requirements.txt

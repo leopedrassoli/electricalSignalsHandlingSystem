@@ -1,496 +1,890 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>mainWindow</class>
- <widget class="QMainWindow" name="mainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>502</width>
-    <height>635</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>Sistema de Relatórios</string>
-  </property>
-  <property name="windowIcon">
-   <iconset theme="icon">
-    <normaloff>.</normaloff>.</iconset>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="gbGrafico">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>360</y>
-      <width>211</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Gráfico(s):</string>
-    </property>
-    <widget class="QRadioButton" name="rb_Separado">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>16</y>
-       <width>69</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Separado</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="rb_Juntos">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>16</y>
-       <width>49</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Único</string>
-     </property>
-     <property name="checked">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bt_Grafico">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>90</y>
-       <width>171</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Visualizar</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="cb_Potencia">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>60</y>
-       <width>70</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Potência</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="cb_Corrente">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>70</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Corrente</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="cb_Tensao">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>70</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Tensão</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="cb_Temperatura">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>40</y>
-       <width>91</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Temperatura</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="gbTipo">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>220</y>
-      <width>211</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Tipo de relatório:</string>
-    </property>
-    <widget class="QRadioButton" name="rb_Completo">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>82</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Completo</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="rb_Periodo">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>82</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Período:</string>
-     </property>
-    </widget>
-    <widget class="QDateTimeEdit" name="dt_Final">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>100</y>
-       <width>128</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="displayFormat">
-      <string>dd/MM/yyyy HH:mm:ss</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>100</y>
-       <width>26</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Final:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>70</y>
-       <width>29</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Início:</string>
-     </property>
-    </widget>
-    <widget class="QDateTimeEdit" name="dt_Inicio">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>70</y>
-       <width>128</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-       <kerning>true</kerning>
-      </font>
-     </property>
-     <property name="showGroupSeparator" stdset="0">
-      <bool>false</bool>
-     </property>
-     <property name="displayFormat">
-      <string>dd/MM/yyyy HH:mm:ss</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="gbArquivo">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>220</y>
-      <width>211</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="title">
-     <string>Arquivo:</string>
-    </property>
-    <widget class="QPushButton" name="bt_Abrir">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>171</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Abrir</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="labelFinal">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>100</y>
-       <width>171</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Final: </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="labelInicio">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>80</y>
-       <width>171</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Início:</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="gbRelatorio">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>360</y>
-      <width>211</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Relatório:</string>
-    </property>
-    <widget class="QPushButton" name="bt_GerarRelatorio">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>171</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Gerar</string>
-     </property>
-     <property name="autoDefault">
-      <bool>false</bool>
-     </property>
-     <property name="default">
-      <bool>false</bool>
-     </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bt_Sair">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>82</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Sair</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QProgressBar" name="progressBarLeitura">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>500</y>
-      <width>331</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="value">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QProgressBar" name="progressBarProcessamento">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>550</y>
-      <width>331</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="value">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>510</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Leitura do arquivo:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>560</y>
-      <width>77</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Processamento:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lb_image">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>20</y>
-      <width>501</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>imagens/logo.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbFundo">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>200</y>
-      <width>501</width>
-      <height>391</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>imagens/fundo.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <zorder>lbFundo</zorder>
-   <zorder>gbGrafico</zorder>
-   <zorder>gbTipo</zorder>
-   <zorder>gbArquivo</zorder>
-   <zorder>gbRelatorio</zorder>
-   <zorder>progressBarLeitura</zorder>
-   <zorder>progressBarProcessamento</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
-   <zorder>lb_image</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>502</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuSobre">
-    <property name="title">
-     <string>Ajuda</string>
-    </property>
-    <addaction name="separator"/>
-    <addaction name="actionSobre"/>
-   </widget>
-   <addaction name="menuSobre"/>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionSobre">
-   <property name="text">
-    <string>Sobre</string>
-   </property>
-  </action>
- </widget>
- <tabstops>
-  <tabstop>bt_Abrir</tabstop>
-  <tabstop>rb_Completo</tabstop>
-  <tabstop>rb_Periodo</tabstop>
-  <tabstop>dt_Inicio</tabstop>
-  <tabstop>dt_Final</tabstop>
-  <tabstop>rb_Separado</tabstop>
-  <tabstop>rb_Juntos</tabstop>
-  <tabstop>cb_Corrente</tabstop>
-  <tabstop>cb_Tensao</tabstop>
-  <tabstop>cb_Potencia</tabstop>
-  <tabstop>bt_Grafico</tabstop>
-  <tabstop>bt_GerarRelatorio</tabstop>
-  <tabstop>bt_Sair</tabstop>
- </tabstops>
- <resources/>
- <connections/>
+	<class>
+		mainWindow
+	</class>
+	<widget class="QMainWindow" name="mainWindow">
+		<property name="geometry">
+			<rect>
+				<x>
+					0
+				</x>
+				<y>
+					0
+				</y>
+				<width>
+					502
+				</width>
+				<height>
+					635
+				</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>
+				Sistema de Relatórios
+			</string>
+		</property>
+		<property name="windowIcon">
+			<iconset theme="icon">
+				<normaloff>
+					.
+				</normaloff>
+				.
+			</iconset>
+		</property>
+		<widget class="QWidget" name="centralwidget">
+			<widget class="QGroupBox" name="gbGrafico">
+				<property name="geometry">
+					<rect>
+						<x>
+							30
+						</x>
+						<y>
+							360
+						</y>
+						<width>
+							211
+						</width>
+						<height>
+							131
+						</height>
+					</rect>
+				</property>
+				<property name="title">
+					<string>
+						Gráfico(s):
+					</string>
+				</property>
+				<widget class="QRadioButton" name="rb_Separado">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								16
+							</y>
+							<width>
+								69
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Separado
+						</string>
+					</property>
+					<property name="checked">
+						<bool>
+							true
+						</bool>
+					</property>
+				</widget>
+				<widget class="QRadioButton" name="rb_Juntos">
+					<property name="geometry">
+						<rect>
+							<x>
+								110
+							</x>
+							<y>
+								16
+							</y>
+							<width>
+								49
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Único
+						</string>
+					</property>
+					<property name="checked">
+						<bool>
+							false
+						</bool>
+					</property>
+				</widget>
+				<widget class="QPushButton" name="bt_Grafico">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								90
+							</y>
+							<width>
+								171
+							</width>
+							<height>
+								23
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Visualizar
+						</string>
+					</property>
+				</widget>
+				<widget class="QCheckBox" name="cb_Potencia">
+					<property name="geometry">
+						<rect>
+							<x>
+								110
+							</x>
+							<y>
+								60
+							</y>
+							<width>
+								70
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Potência
+						</string>
+					</property>
+				</widget>
+				<widget class="QCheckBox" name="cb_Corrente">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								40
+							</y>
+							<width>
+								70
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Corrente
+						</string>
+					</property>
+				</widget>
+				<widget class="QCheckBox" name="cb_Tensao">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								60
+							</y>
+							<width>
+								70
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Tensão
+						</string>
+					</property>
+				</widget>
+				<widget class="QCheckBox" name="cb_Temperatura">
+					<property name="geometry">
+						<rect>
+							<x>
+								110
+							</x>
+							<y>
+								40
+							</y>
+							<width>
+								91
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Temperatura
+						</string>
+					</property>
+				</widget>
+			</widget>
+			<widget class="QGroupBox" name="gbTipo">
+				<property name="enabled">
+					<bool>
+						true
+					</bool>
+				</property>
+				<property name="geometry">
+					<rect>
+						<x>
+							260
+						</x>
+						<y>
+							220
+						</y>
+						<width>
+							211
+						</width>
+						<height>
+							131
+						</height>
+					</rect>
+				</property>
+				<property name="title">
+					<string>
+						Tipo de relatório:
+					</string>
+				</property>
+				<widget class="QRadioButton" name="rb_Completo">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								20
+							</y>
+							<width>
+								82
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Completo
+						</string>
+					</property>
+					<property name="checked">
+						<bool>
+							true
+						</bool>
+					</property>
+				</widget>
+				<widget class="QRadioButton" name="rb_Periodo">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								40
+							</y>
+							<width>
+								82
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Período:
+						</string>
+					</property>
+				</widget>
+				<widget class="QDateTimeEdit" name="dt_Final">
+					<property name="enabled">
+						<bool>
+							false
+						</bool>
+					</property>
+					<property name="geometry">
+						<rect>
+							<x>
+								50
+							</x>
+							<y>
+								100
+							</y>
+							<width>
+								128
+							</width>
+							<height>
+								20
+							</height>
+						</rect>
+					</property>
+					<property name="displayFormat">
+						<string>
+							dd/MM/yyyy HH:mm:ss
+						</string>
+					</property>
+				</widget>
+				<widget class="QLabel" name="label_6">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								100
+							</y>
+							<width>
+								26
+							</width>
+							<height>
+								20
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Final:
+						</string>
+					</property>
+				</widget>
+				<widget class="QLabel" name="label_5">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								70
+							</y>
+							<width>
+								29
+							</width>
+							<height>
+								21
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Início:
+						</string>
+					</property>
+				</widget>
+				<widget class="QDateTimeEdit" name="dt_Inicio">
+					<property name="enabled">
+						<bool>
+							false
+						</bool>
+					</property>
+					<property name="geometry">
+						<rect>
+							<x>
+								50
+							</x>
+							<y>
+								70
+							</y>
+							<width>
+								128
+							</width>
+							<height>
+								20
+							</height>
+						</rect>
+					</property>
+					<property name="font">
+						<font>
+							<weight>
+								50
+							</weight>
+							<italic>
+								false
+							</italic>
+							<bold>
+								false
+							</bold>
+							<underline>
+								false
+							</underline>
+							<strikeout>
+								false
+							</strikeout>
+							<kerning>
+								true
+							</kerning>
+						</font>
+					</property>
+					<property name="showGroupSeparator" stdset="0">
+						<bool>
+							false
+						</bool>
+					</property>
+					<property name="displayFormat">
+						<string>
+							dd/MM/yyyy HH:mm:ss
+						</string>
+					</property>
+				</widget>
+			</widget>
+			<widget class="QGroupBox" name="gbArquivo">
+				<property name="geometry">
+					<rect>
+						<x>
+							30
+						</x>
+						<y>
+							220
+						</y>
+						<width>
+							211
+						</width>
+						<height>
+							131
+						</height>
+					</rect>
+				</property>
+				<property name="font">
+					<font>
+						<weight>
+							50
+						</weight>
+						<bold>
+							false
+						</bold>
+					</font>
+				</property>
+				<property name="title">
+					<string>
+						Arquivo:
+					</string>
+				</property>
+				<widget class="QPushButton" name="bt_Abrir">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								30
+							</y>
+							<width>
+								171
+							</width>
+							<height>
+								41
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Abrir
+						</string>
+					</property>
+				</widget>
+				<widget class="QLabel" name="labelFinal">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								100
+							</y>
+							<width>
+								171
+							</width>
+							<height>
+								16
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Final:
+						</string>
+					</property>
+				</widget>
+				<widget class="QLabel" name="labelInicio">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								80
+							</y>
+							<width>
+								171
+							</width>
+							<height>
+								16
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Início:
+						</string>
+					</property>
+				</widget>
+			</widget>
+			<widget class="QGroupBox" name="gbRelatorio">
+				<property name="geometry">
+					<rect>
+						<x>
+							260
+						</x>
+						<y>
+							360
+						</y>
+						<width>
+							211
+						</width>
+						<height>
+							131
+						</height>
+					</rect>
+				</property>
+				<property name="title">
+					<string>
+						Relatório:
+					</string>
+				</property>
+				<widget class="QPushButton" name="bt_GerarRelatorio">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								30
+							</y>
+							<width>
+								171
+							</width>
+							<height>
+								41
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Gerar
+						</string>
+					</property>
+					<property name="autoDefault">
+						<bool>
+							false
+						</bool>
+					</property>
+					<property name="default">
+						<bool>
+							false
+						</bool>
+					</property>
+					<property name="flat">
+						<bool>
+							false
+						</bool>
+					</property>
+				</widget>
+				<widget class="QPushButton" name="bt_Sair">
+					<property name="geometry">
+						<rect>
+							<x>
+								20
+							</x>
+							<y>
+								82
+							</y>
+							<width>
+								171
+							</width>
+							<height>
+								31
+							</height>
+						</rect>
+					</property>
+					<property name="text">
+						<string>
+							Sair
+						</string>
+					</property>
+				</widget>
+			</widget>
+			<widget class="QProgressBar" name="progressBarLeitura">
+				<property name="geometry">
+					<rect>
+						<x>
+							140
+						</x>
+						<y>
+							500
+						</y>
+						<width>
+							331
+						</width>
+						<height>
+							41
+						</height>
+					</rect>
+				</property>
+				<property name="value">
+					<number>
+						0
+					</number>
+				</property>
+			</widget>
+			<widget class="QProgressBar" name="progressBarProcessamento">
+				<property name="geometry">
+					<rect>
+						<x>
+							140
+						</x>
+						<y>
+							550
+						</y>
+						<width>
+							331
+						</width>
+						<height>
+							41
+						</height>
+					</rect>
+				</property>
+				<property name="value">
+					<number>
+						0
+					</number>
+				</property>
+			</widget>
+			<widget class="QLabel" name="label">
+				<property name="geometry">
+					<rect>
+						<x>
+							40
+						</x>
+						<y>
+							510
+						</y>
+						<width>
+							91
+						</width>
+						<height>
+							21
+						</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>
+						Leitura do arquivo:
+					</string>
+				</property>
+			</widget>
+			<widget class="QLabel" name="label_2">
+				<property name="geometry">
+					<rect>
+						<x>
+							40
+						</x>
+						<y>
+							560
+						</y>
+						<width>
+							77
+						</width>
+						<height>
+							21
+						</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>
+						Processamento:
+					</string>
+				</property>
+			</widget>
+			<widget class="QLabel" name="lb_image">
+				<property name="geometry">
+					<rect>
+						<x>
+							0
+						</x>
+						<y>
+							20
+						</y>
+						<width>
+							501
+						</width>
+						<height>
+							191
+						</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string />
+				</property>
+				<property name="pixmap">
+					<pixmap>
+						img/logo.png
+					</pixmap>
+				</property>
+				<property name="scaledContents">
+					<bool>
+						true
+					</bool>
+				</property>
+			</widget>
+			<widget class="QLabel" name="lbFundo">
+				<property name="geometry">
+					<rect>
+						<x>
+							0
+						</x>
+						<y>
+							200
+						</y>
+						<width>
+							501
+						</width>
+						<height>
+							391
+						</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string />
+				</property>
+				<property name="pixmap">
+					<pixmap>
+						img/fundo.png
+					</pixmap>
+				</property>
+				<property name="scaledContents">
+					<bool>
+						true
+					</bool>
+				</property>
+			</widget>
+			<zorder>
+				lbFundo
+			</zorder>
+			<zorder>
+				gbGrafico
+			</zorder>
+			<zorder>
+				gbTipo
+			</zorder>
+			<zorder>
+				gbArquivo
+			</zorder>
+			<zorder>
+				gbRelatorio
+			</zorder>
+			<zorder>
+				progressBarLeitura
+			</zorder>
+			<zorder>
+				progressBarProcessamento
+			</zorder>
+			<zorder>
+				label
+			</zorder>
+			<zorder>
+				label_2
+			</zorder>
+			<zorder>
+				lb_image
+			</zorder>
+		</widget>
+		<widget class="QMenuBar" name="menubar">
+			<property name="geometry">
+				<rect>
+					<x>
+						0
+					</x>
+					<y>
+						0
+					</y>
+					<width>
+						502
+					</width>
+					<height>
+						21
+					</height>
+				</rect>
+			</property>
+			<widget class="QMenu" name="menuSobre">
+				<property name="title">
+					<string>
+						Ajuda
+					</string>
+				</property>
+				<addaction name="separator" />
+				<addaction name="actionSobre" />
+			</widget>
+			<addaction name="menuSobre" />
+		</widget>
+		<widget class="QStatusBar" name="statusbar" />
+		<action name="actionSobre">
+			<property name="text">
+				<string>
+					Sobre
+				</string>
+			</property>
+		</action>
+	</widget>
+	<tabstops>
+		<tabstop>
+			bt_Abrir
+		</tabstop>
+		<tabstop>
+			rb_Completo
+		</tabstop>
+		<tabstop>
+			rb_Periodo
+		</tabstop>
+		<tabstop>
+			dt_Inicio
+		</tabstop>
+		<tabstop>
+			dt_Final
+		</tabstop>
+		<tabstop>
+			rb_Separado
+		</tabstop>
+		<tabstop>
+			rb_Juntos
+		</tabstop>
+		<tabstop>
+			cb_Corrente
+		</tabstop>
+		<tabstop>
+			cb_Tensao
+		</tabstop>
+		<tabstop>
+			cb_Potencia
+		</tabstop>
+		<tabstop>
+			bt_Grafico
+		</tabstop>
+		<tabstop>
+			bt_GerarRelatorio
+		</tabstop>
+		<tabstop>
+			bt_Sair
+		</tabstop>
+	</tabstops>
+	<resources />
+	<connections />
 </ui>
