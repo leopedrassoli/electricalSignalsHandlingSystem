@@ -1,6 +1,6 @@
 import os
 
-temp_path = "./temp/"
+temp_path = "./src/temp/"
 titulos = [
     "Corrente [A]",
     "Tensão [V]",
@@ -231,6 +231,7 @@ def gerarPDF(arquivo_html, caminho):
 def deleteTempFiles():
     import os, glob
 
-    files = glob.glob("./temp/*")
+    files = glob.glob("./src/temp/*")
     for f in files:
         os.remove(f)
+    os.rmdir(temp_path)

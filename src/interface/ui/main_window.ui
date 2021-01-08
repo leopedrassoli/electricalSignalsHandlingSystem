@@ -736,7 +736,7 @@
 				</property>
 				<property name="pixmap">
 					<pixmap>
-						img/logo.png
+						./src/img/logo.png
 					</pixmap>
 				</property>
 				<property name="scaledContents">
@@ -767,7 +767,7 @@
 				</property>
 				<property name="pixmap">
 					<pixmap>
-						img/fundo.png
+						./src/img/fundo.png
 					</pixmap>
 				</property>
 				<property name="scaledContents">

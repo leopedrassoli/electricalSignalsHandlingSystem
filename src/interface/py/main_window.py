@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
         mainWindow.setObjectName("mainWindow")
@@ -121,13 +122,13 @@ class Ui_mainWindow(object):
         self.lb_image = QtWidgets.QLabel(self.centralwidget)
         self.lb_image.setGeometry(QtCore.QRect(0, 20, 501, 191))
         self.lb_image.setText("")
-        self.lb_image.setPixmap(QtGui.QPixmap("img/logo.png"))
+        self.lb_image.setPixmap(QtGui.QPixmap("./src/img/logo.png"))
         self.lb_image.setScaledContents(True)
         self.lb_image.setObjectName("lb_image")
         self.lbFundo = QtWidgets.QLabel(self.centralwidget)
         self.lbFundo.setGeometry(QtCore.QRect(0, 200, 501, 391))
         self.lbFundo.setText("")
-        self.lbFundo.setPixmap(QtGui.QPixmap("img/fundo.png"))
+        self.lbFundo.setPixmap(QtGui.QPixmap("./src/img/fundo.png"))
         self.lbFundo.setScaledContents(True)
         self.lbFundo.setObjectName("lbFundo")
         self.lbFundo.raise_()
@@ -204,10 +205,10 @@ class Ui_mainWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     mainWindow = QtWidgets.QMainWindow()
     ui = Ui_mainWindow()
     ui.setupUi(mainWindow)
     mainWindow.show()
     sys.exit(app.exec_())
-

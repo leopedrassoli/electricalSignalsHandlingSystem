@@ -3,14 +3,14 @@ from PyQt5.QtWidgets import QWidget, QMessageBox, QShortcut
 from PyQt5.QtGui import QKeySequence, QPixmap
 import sys, os
 
-import main_window as mw
-import sobre as sb
+import interface.py.main_window as mw
+import interface.py.sobre as sb
 import values_to_grafico as vtg
 import gerarRelatorio as gr
 
-icone = "img/icone.png"
-fundo = "img/fundo.png"
-logos = "img/logos.png"
+icone = "./src/img/icone.png"
+fundo = "./src/img/fundo.png"
+logos = "./src/img/logos.png"
 
 
 class MainWindow(QtWidgets.QMainWindow, mw.Ui_mainWindow):
@@ -194,7 +194,16 @@ class MainWindow(QtWidgets.QMainWindow, mw.Ui_mainWindow):
     def sair(self):
         sys.exit()
 
+    def createTempDir(self):
+        import os
+        try:
+            os.mkdir("./src/temp")
+        except FileExistsError:
+            pass
+
+
     def Relatorio(self):
+        self.createTempDir()
         w = QWidget()
         w.setWindowIcon(QtGui.QIcon(QtGui.QPixmap(icone)))
         try:

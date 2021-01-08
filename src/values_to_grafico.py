@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-path = "./temp/"
+path = "./src/temp/"
 titulos = ["Corrente [A]", "Tensão [V]", "Potência [W]", "Temperatura [ºC]"]
 formato = ".png"
 date_fmt = "%d/%b, %H:%M"
@@ -11,13 +11,6 @@ aux = 1
 
 
 def Layout(f1, tipo, x):
-
-    #    days1 = mdates.HourLocator(interval = 12)
-    #    dayss = mdates.HourLocator()
-    #    f1.set_ylim(ymin=min(tipo['y']),ymax=max(tipo['y']))
-    #    f1.set_xlim(x[0],x[len(x)-1])
-    #    f1.xaxis.set_major_locator(days1)
-    #    f1.xaxis.set_minor_locator(dayss)
     plt.tight_layout()
     f1.grid(True)
 
