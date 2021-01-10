@@ -39,7 +39,7 @@ Requirements:
 
 ## Layout
 
-![final_layout](\src\img\layout_final.png)
+![final_layout](src/img/layout_final.png)
 
 ## Contact
 
