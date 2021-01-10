@@ -14,8 +14,6 @@ logos = "./src/img/logos.png"
 
 
 class MainWindow(QtWidgets.QMainWindow, mw.Ui_mainWindow):
-    global progressBar
-
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
@@ -88,10 +86,6 @@ class MainWindow(QtWidgets.QMainWindow, mw.Ui_mainWindow):
                 "Início: " + primeiro.strftime("%d/%m/%y - %H:%M:%S")
             )
             self.labelFinal.setText("Final:  " + ultimo.strftime("%d/%m/%y - %H:%M:%S"))
-            #            self.dt_Inicio.setMinimumDateTime(primeiro)
-            #            self.dt_Inicio.setMaximumDateTime(ultimo)
-            #            self.dt_Final.setMinimumDateTime(primeiro)
-            #            self.dt_Final.setMaximumDateTime(ultimo)
             self.dt_Inicio.setDateTime(primeiro)
             self.dt_Final.setDateTime(ultimo)
         except:
@@ -196,11 +190,11 @@ class MainWindow(QtWidgets.QMainWindow, mw.Ui_mainWindow):
 
     def createTempDir(self):
         import os
+
         try:
             os.mkdir("./src/temp")
         except FileExistsError:
             pass
-
 
     def Relatorio(self):
         self.createTempDir()
